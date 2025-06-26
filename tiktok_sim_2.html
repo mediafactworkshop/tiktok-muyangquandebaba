@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TikTok 影片模擬頁面</title>
+<style>
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  header img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+  }
+  .video-container {
+    position: relative;
+    padding-top: 177.77%; /* 16:9 的反比，但 TikTok 視頻是 9:16 所以用 16:9 反比 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  }
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .info {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+  .username {
+    font-weight: bold;
+    color: #111;
+  }
+  .description {
+    margin-top: 6px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="TikTok_logo.svg" alt="TikTok Logo" />
+  </header>
+<div class="video-container">
+  <video controls muted playsinline>
+    <source src="fakenewstiktok.mp4" type="video/mp4" />
+    您的瀏覽器不支援影片播放。
+  </video>
+</div>
+<div class="info">
+  <div class="username">@muyangquandebaba</div>
+  <div class="description">京兆都督．2023-9-8</div>
+</div>
+</body>
+</html>
