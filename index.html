@@ -30,12 +30,13 @@
     color: #000;
   }
   .video-container {
-    position: relative;
-    padding-top: 177.77%; /* 16:9 的反比，但 TikTok 視頻是 9:16 所以用 16:9 反比 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
   }
   .video-container video {
     position: absolute;
